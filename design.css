@@ -1,0 +1,58 @@
+body {
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+}
+.weather-app {
+  background: white;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+header {
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
+}
+.city_submit {
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+}
+.city {
+  background-color: #f9f7fe;
+  border: none;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  padding: 20px;
+  width: 75%;
+  border-radius: 6px;
+}
+.city-search {
+  font-size: medium;
+}
+.current-weather {
+  font-size: small;
+}
+h1 {
+  font-size: 40px;
+  margin: 60px 0 0;
+  font-weight: 650;
+  color: red;
+  padding: 0 0 12px;
+}
+
+p {
+  margin: 0;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.weather-forcast-day {
+  font-size: 18px;
+  font-family: PT Mono, monospace;
+}
+footer p {
+  font-size: 50px;
+  padding: 20px 0 2px;
+}
