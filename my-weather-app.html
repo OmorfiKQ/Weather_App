@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Niconne&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="design.css" />
     <title>Weather App.</title>
   </head>
@@ -21,7 +22,7 @@
             placeholder="Enter a city..."
             required
             class="search-form-input"
-            id="search-input"
+            id="search-form-input"
           />
 
           <input type="submit" value="Search" class="search-form-button" />
@@ -30,37 +31,37 @@
     </div>
 
     <main>
-      <div class="weather-app-data">
+      <div class="weather-app-data" id="app-data">
         <div>
           <h1 class="weather-app-city" id="city">Paris</h1>
 
           <p class="weather-app-details" id="app-details">
             <span id="current-date"></span>,
-           moderate rain
+            <span id="description"></span>
             <br />
-            Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            Humidity: <strong id="humidity">87%</strong>, Wind:
+            <strong id="wind-speed">7.2mg/h</strong>
           </p>
         </div>
         <div class="weather-app-temp-container">
-          <div class="weather-app-icon" id="current-temperature-icon"> ☀️ </div>
-          <div class="weather-app-temperature" id="current-temperature"> 24 </div>
-          <div class="weather-app-unit"> °F </div>
+          <div class="weather-app-icon" id="current-temperature-icon"><img src="" alt=""></div>
+          <div class="weather-app-temperature" id="current-temperature">24</div>
+          <div class="weather-app-unit">°F</div>
         </div>
       </div>
     </main>
 
     <footer>
-      Coded by 
-      <a href="https://github.com/OmorfiKQ" target="_blank">  
-        JaSherai B
-      </a>
+      Coded by
+      <a href="https://github.com/OmorfiKQ" target="_blank"> JaSherai B </a>
       <a href="https://github.com/OmorfiKQ/okq-weatherapp" target="_blank">
         ,open-sourced on GitHub
       </a>
-        and
+      and
       <a
         href="https://app.netlify.com/projects/okq-weatherapp-page/overview"
-        target="_blank">
+        target="_blank"
+      >
         hosted on Netlify
       </a>
     </footer>

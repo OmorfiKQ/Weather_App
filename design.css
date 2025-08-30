@@ -74,6 +74,7 @@ main {
   font-size: 80px;
   font-weight: bold;
   margin-left: 8px;
+  line-height: 88px;
 }
 .weather-app-icon {
   font-size: 40px;
@@ -81,7 +82,7 @@ main {
 }
 .weather-app-unit {
   font-size: 30px;
-  margin-top: 16px;
+  margin-top: 6px;
 }
 footer {
   background: #ed86f15b;
