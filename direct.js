@@ -15,20 +15,17 @@ function displayWeather(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
-  let iconElement = document.querySelector("#current-temperature-icon");
+  let iconElement = document.querySelector("#icon");
   let date = new Date(response.data.time * 1000);
   let timeElement = document.querySelector("#weather-app-time");
-
-  console.log(response.data.daily[1].condition.icon_url);
-  temperatureElement.innerHTML = Math.round(
-    response.data.daily[1].temperature.day
-  );
+  
+  temperatureElement.innerHTML = Math.round(response.data.daily[0].temperature.day);
   cityElement.innerHTML = response.data.city;
-  descriptionElement.innerHTML = response.data.daily[1].condition.description;
-  humidityElement.innerHTML = `${response.data.daily[1].temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.daily[1].wind.speed} mph`;
+  descriptionElement.innerHTML = response.data.daily[0].condition.description;
+  humidityElement.innerHTML = `${response.data.daily[0].temperature.humidity}%`;
+  windSpeedElement.innerHTML = `${response.data.daily[0].wind.speed} mph`;
   timeElement.innerHTML = formatDate(date);
-  iconElement.innerHTML = `<img src="${response.data.daily[1].condition.icon_url}" class="weather-app-icon" />`;
+  iconElement.innerHTML = `img src="${response.data.daily[0].condition.icon_url}" class="weather-app-icon"  />`;
 }
 
 let searchFormSelector = document.querySelector("#search-form");
