@@ -4,7 +4,7 @@ function searchSubmission(event) {
   let city = searchBox.value;
 
   let apiKey = "o43fad540acb9b0t06a993fb7c4f5697";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(displayWeather);
 }
@@ -25,7 +25,7 @@ function displayWeather(response) {
   humidityElement.innerHTML = `${response.data.daily[0].temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.daily[0].wind.speed} mph`;
   timeElement.innerHTML = formatDate(date);
-  iconElement.innerHTML = `img src="${response.data.daily[0].condition.icon_url}" class="weather-app-icon"  />`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"  />`;
 }
 
 let searchFormSelector = document.querySelector("#search-form");
