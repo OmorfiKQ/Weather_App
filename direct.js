@@ -18,19 +18,18 @@ function displayWeather(response) {
   let windSpeedElement = document.querySelector("#wind-speed");
   let iconElement = document.querySelector("#icon");
   let icon = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"  />`;
-  let date = new Date(response.data.time * 1000);
-  let timeElement = document.querySelector("#weather-app-time");
+  let currentDateELement = document.querySelector("#current-date");
+  let currentDate = new Date(response.data.time * 1000);
   
-  console.log(response.data);
+
 
   temperatureElement.innerHTML = temperature
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed} mph`;
-  timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = icon
-  
+  currentDateELement.innerHTML = formatDate(currentDate);
 }
 
 
@@ -64,7 +63,7 @@ function formatDate(date) {
 let searchFormSelector = document.querySelector("#search-form");
 searchFormSelector.addEventListener("submit", searchSubmission);
 
-let currentDateELement = document.querySelector("#current-date");
-let currentDate = new Date();
 
-currentDateELement.innerHTML = formatDate(currentDate);
+
+
+
