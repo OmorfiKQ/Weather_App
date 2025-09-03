@@ -19,13 +19,16 @@ function displayWeather(response) {
   let date = new Date(response.data.time * 1000);
   let timeElement = document.querySelector("#weather-app-time");
   
-  temperatureElement.innerHTML = Math.round(response.data.daily[0].temperature.day);
+  console.log(response.data);
+
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
-  descriptionElement.innerHTML = response.data.daily[0].condition.description;
-  humidityElement.innerHTML = `${response.data.daily[0].temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.daily[0].wind.speed} mph`;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed} mph`;
   timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"  />`;
+  
 }
 
 let searchFormSelector = document.querySelector("#search-form");
